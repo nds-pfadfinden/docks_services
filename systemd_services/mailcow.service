@@ -7,9 +7,9 @@ After=docker.service
 Type=oneshot
 RemainAfterExit=true
 WorkingDirectory=/opt/docks_services/mailcow
-ExecRestart=/usr/local/bin/docker-compose restart --remove-orphans
-ExecStart=/usr/local/bin/docker-compose up -d --remove-orphans
-ExecStop=/usr/local/bin/docker-compose stop
+ExecRestart=/usr/bin/docker-compose restart --remove-orphans
+ExecStart=/usr/bin/docker-compose up -d --remove-orphans
+ExecStop=/usr/bin/docker-composestop
 
 [Install]
 WantedBy=multi-user.target
