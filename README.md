@@ -18,5 +18,21 @@ Every Maildomains needs a MX Record on 'mailcow.pfadfinderei.de'
 
 # Systemd File
 
+All services are created as systemd services.
+The systemd services start and stop the docker environments.  
+The service files are located here under 'systemd_services'. To activate a service create a symlink to the appropriate file:
+
+'''
+ln -s -v /opt/docks_services/systemd_services/<service>.service /etc/systemd/system/<service>.service
+sudo systemctl daemon-reload
+'''
 
 # Nginx configs
+
+If nginx configuration is required for the services in the docks, they are defived in nginx_conf. 
+To define them at nginx create a link:
+'''
+ link -s -v /opt/docks_services/nginx_conf/<name>.conf /etc/nginx/sites-available/<name>.conf
+
+'''
+Now the site can be activated.
