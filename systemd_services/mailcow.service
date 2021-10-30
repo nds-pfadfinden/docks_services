@@ -1,0 +1,15 @@
+[Unit]
+Description=Postfix Stack for handle mails
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+WorkingDirectory=/opt/docks_services/mailcow
+ExecRestart=/usr/bin/docker-compose restart --remove-orphans
+ExecStart=/usr/bin/docker-compose up -d --remove-orphans
+ExecStop=/usr/bin/docker-composestop
+
+[Install]
+WantedBy=multi-user.target
