@@ -618,14 +618,25 @@ networks:
         - subnet: ${IPV6_NETWORK:-fd4d:6169:6c63:6f77::/64}
 
 volumes:
-  vmail-vol-1:
+  vmail-vol-1: 
+    external: true
   vmail-index-vol-1:
+    external: true
   mysql-vol-1:
+    external: true
   mysql-socket-vol-1:
+    external: true
   redis-vol-1:
+    external: true
   rspamd-vol-1:
+    external: true
   solr-vol-1:
+    external: true
   postfix-vol-1:
+    external: true
   crypt-vol-1:
+    external: true
   sogo-web-vol-1:
+    external: true
   sogo-userdata-backup-vol-1:
+    external: true
