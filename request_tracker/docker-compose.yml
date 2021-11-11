@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  requesttracker:
+    image: netsandbox/request-tracker:5.0
+    container_name: requst_tracker
+    restart: always
+    ports:
+      - 8080:8080
+      - 33006:3306
+    environment:
+      - RT_WEB_PORT=8080 
