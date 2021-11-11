@@ -2,13 +2,13 @@
 Description=Postfix Stack for handle mails
 Requires=docker.service
 After=docker.service
-User=dockworker
 
 [Service]
 Type=oneshot
+User=dockworker
 RemainAfterExit=true
 WorkingDirectory=/opt/docks_services/mailcow
-ExecStartPre=pre_up.sh
+ExecStartPre=/opt/docks_services/mailcow/pre_up.sh
 ExecRestart=/usr/bin/docker-compose restart --remove-orphans
 ExecStart=/usr/bin/docker-compose up -d --remove-orphans
 ExecStop=/usr/bin/docker-compose down
