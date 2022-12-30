@@ -19,6 +19,8 @@ services:
       - 33060
   wordpress:
     image: wordpress:php8.2-fpm
+    depends_on:
+      - wordpressdb
     ports:
       - 9000:9000
     restart: always
@@ -31,6 +33,8 @@ services:
       - ./wordpress:/var/www/html
   nginx:
     image: nginx:latest
+    depends_on:
+      - wordpress
     ports:
       - "127.0.0.1:8082:80"
     volumes:
