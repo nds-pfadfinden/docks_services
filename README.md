@@ -11,7 +11,11 @@ Wordpress is a Content Management System for hosting Homepages.
 The System is based php, which is part of the container.
 All actual content is stored in the directory wordpress, which is containing also HTML and files.
 This directory is not tracked by git and will safed by general backups.
- 
+
+## pretix
+
+Pretix a software for hosting ticket shops. We have using this Shop for a Registration of our LaPfiLa24. 
+The Data of all container are stored on the filesystem and not a docker volume. 
 
 ## mailcow
 
