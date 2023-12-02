@@ -5,6 +5,14 @@ The Services are configure in this Repo.
 
 All Services are explained in the next part.
 
+## wordpress
+
+Wordpress is a Content Management System for hosting Homepages.
+The System is based php, which is part of the container.
+All actual content is stored in the directory wordpress, which is containing also HTML and files.
+This directory is not tracked by git and will safed by general backups.
+ 
+
 ## mailcow
 
 Mailcow is a postfix stack for handle E-Mails, provides IMAP and Webmailer.
