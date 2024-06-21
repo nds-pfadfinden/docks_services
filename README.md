@@ -28,6 +28,13 @@ The mail server configuration can be accessed at the Hostname mailcow.pfadfinder
 On this Homepage the Maildomains can be configure. 
 Every Maildomains needs a MX Record on 'mailcow.pfadfinderei.de'
 
+## Pfaditag Linktree
+
+For the Pfaditag we needed a Linktree.
+Therefore a Simple HTML Website is located here. 
+In the folder ```./pfaditag24```you can find it. 
+With the script install.sh the website can be installed or updated.
+
 # Systemd File
 
 All services are created as systemd services.
